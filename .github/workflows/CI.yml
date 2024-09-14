@@ -101,7 +101,7 @@ jobs:
           7z a -mx=9 ${image_name}.7z *.zip
       - name: Upload images to Artifact
         if: ${{ success() }}
-        uses: actions/upload-artifact@v2.2.1
+        uses: actions/upload-artifact@v4.4.0
         with:
           name: ${{ env.image_name }}
           path: ${{ env.images_dir }}/${{ env.image_name }}.7z
